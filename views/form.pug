@@ -1,0 +1,26 @@
+extends layout
+
+block content 
+    h1.page-title #{formtitle}
+
+    form(class="msgForm" method='POST' action="/newItem" enctype="multipart/form-data")
+            div.form-group
+            label(for='name')
+            input(type='text', placeholder='Name' name='name')
+            div.form-group
+            label(for='description')
+            input(type='text', placeholder='Description' name='description')
+            div.form-group
+            label(for='category')
+            input(type='text', placeholder='Category' name='category')
+            div.form-group
+            label(for='price')
+            input(type='text', placeholder='Price' name='price')
+            div.form-group
+            label(for='instock')
+            input(type='text', placeholder='Instock' name='instock')
+            div.form-group
+            label(for='image')
+            input(placeholder='Image' type='file' name='image')
+            br
+            button.add-item-button(type='submit') Submit

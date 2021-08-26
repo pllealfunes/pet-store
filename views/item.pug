@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  img(src=item.imageurl, width="250")
+  h1= item.name
+  p.description Description: #{item.description}
+  p.item-category Category: #{item.category}
+  p.item-price Price: $#{item.price}
+  p.item-instock Instock: #{item.instock}
+  p.item-created-time Created At: #{item.createdAt}
+  p.item-updated-time Updated At: #{item.updatedAt}
+
+  h2 Edit Your Post:
+  form(class="msgForm" method='POST' action="/item/"+item._id enctype="multipart/form-data")
+            div.form-group
+            label(for='name')
+            input(type='text', value=item.name name='name')
+            div.form-group
+            label(for='description')
+            input(type='text', value=item.description name='description')
+            div.form-group
+            label(for='category')
+            input(type='text', value=item.category name='category')
+            div.form-group
+            label(for='price')
+            input(type='text', value=item.price name='price')
+            div.form-group
+            label(for='instock')
+            input(type='text', value=item.instock name='instock')
+            div.form-group
+            label(for='image')
+            input(placeholder='Image', type='file' value=item.imageurl name='image')
+            br
+            button.update-button(type='submit') Update Item
+  br
+  h2 Delete Inventory Item
+  p Before deleting an item be sure if this is what you want. Items that are deleted cannot be recovered.
+  br
+  a.delete-button(href='/item/delete/'+item._id) Delete Item
