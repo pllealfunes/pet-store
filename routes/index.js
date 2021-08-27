@@ -7,8 +7,10 @@ var items = require('../models/itemsSchema');
 router.get('/', (req, res, next) => {
   items.find({})
     .then((items) => {
+      const categories = [...new Set(items.map(category => category.category))]
       res.render('index', {
-        items: items
+        items: items,
+        categories: categories
       });
     })
     .catch((err) => {

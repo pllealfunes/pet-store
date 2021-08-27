@@ -6,8 +6,8 @@ block content
   div.wrapper
     div.category-container
       a.newitem-link(href='/newItem') Add New item
-      each category in items
-        a.category-title(href='/category/'+category.category)=category.category
+      each category in categories
+        a.category-title(href='/category/'+category)=category
         br
 
     div.items-container
