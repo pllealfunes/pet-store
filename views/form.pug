@@ -3,7 +3,7 @@ extends layout
 block content 
     h1.page-title #{formtitle}
 
-    form(class="msgForm" method='POST' action="/newItem" enctype="multipart/form-data")
+    form(class="newItemForm" method='POST' action="/newItem" enctype="multipart/form-data")
             div.form-group
             label(for='name')
             input(type='text', placeholder='Name' name='name')

@@ -1,18 +1,19 @@
 extends layout
 
 block content
-  h1.page-title HomePage
+  h1.page-title Pet Store Inventory
 
-  div.category-container
-    each category in items
-      a.category-title(href='/category/'+category.category)=category.category
-      br
-
-  div.items-container
-    each item in items
-      div.item-container
-        img(src=item.imageurl, width="280" height="280")
+  div.wrapper
+    div.category-container
+      a.newitem-link(href='/newItem') Add New item
+      each category in items
+        a.category-title(href='/category/'+category.category)=category.category
         br
-        a.item-name(href='/item/'+item._id) #{item.name}
-        p=item.description
-        p=item.category
+
+    div.items-container
+      each item in items
+        div.item-container
+          img(src=item.imageurl, width="280" height="280")
+          br
+          a.item-name(href='/item/'+item._id) #{item.name}
+          p.item-category=item.category
