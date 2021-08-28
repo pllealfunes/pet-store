@@ -4,13 +4,11 @@ extends layout
 block content
   h1.page-title #{title}
 
-
-  each item in category
-    img(src=item.imageurl, width="250")
-    a(href='/item/'+item._id) #{item.name}
-    p=item.description
-    p=item.category
-    p=item.price
-    p=item.instock
-    p=item.url
+  div.items-container
+    each item in category
+      div.item-container
+        img(src=item.imageurl, width="250" height="280")
+        a.item-name(href='/item/'+item._id) #{item.name}
+        p.item-catgeory=item.category
+        p.item-instock Instock: #{item.instock}
 
