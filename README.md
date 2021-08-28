@@ -15,6 +15,9 @@ On this page a user will view all items under the same catgeory and click on an 
 On this page a user can view more details about an item. The user may also choose to update or delete the item from the database.
 
 # Further Details
-* Run project using nodemon: npm run devstart
+* Run project using nodemon: npm run devstart & naviaget to localhost:3000
 * This project uses a .env file
 * Does not display errors if failure to upload new product or fail to edit product properly
+
+# Resources
+Display Categories on homepage: https://flaviocopes.com/how-to-get-unique-properties-of-object-in-array/

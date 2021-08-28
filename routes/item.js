@@ -3,7 +3,6 @@ var itemRouter = express.Router();
 var items = require('../models/itemsSchema');
 var multer = require('multer');
 var photoController = require('../controllers/photoController');
-
 var upload = multer({ storage: photoController.storage, fileFilter: photoController.imageFilter })
 
 
@@ -21,6 +20,7 @@ itemRouter.get('/:itemid', function (req, res, next) {
             }
         });
 });
+
 
 itemRouter.post('/:itemid', upload.single('image'), (req, res, next) => {
     const photo = "/images/" + req.file.filename;
