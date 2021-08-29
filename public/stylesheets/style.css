@@ -111,7 +111,12 @@ p{
   }
   
   .file-input{
-    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align-last: center;
   }
   .newItemForm > input,.add-item-button{
     font-size: 1.5rem;
@@ -121,5 +126,18 @@ p{
   .editForm > input{
     font-size: 1.2rem;
     margin-bottom: 1rem;
+  }
+
+  .warning-message{
+    background-color: gold;
+    color: #FFF;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-weight: bold;
   }
 
