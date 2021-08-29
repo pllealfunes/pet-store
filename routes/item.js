@@ -23,7 +23,7 @@ itemRouter.get('/:itemid', function (req, res, next) {
 
 
 itemRouter.post('/:itemid', upload.single('image'), (req, res, next) => {
-    const photo = "/images/" + req.file.filename;
+    //const photo = "/images/" + req.file.filename;
     items.findOne({
         '_id': req.params.itemid
     })
@@ -34,13 +34,13 @@ itemRouter.post('/:itemid', upload.single('image'), (req, res, next) => {
                 category: req.body.category,
                 price: req.body.price,
                 instock: req.body.instock,
-                imageurl: photo
+                //imageurl: req.body.imageurl
             }
             item.set(data);
             item.save().then(() => {
-                res.redirect('/');
+                res.redirect(`/item/${item.id}`);
             });
-            //console.log(item);
+            //
         }).catch((err) => {
             if (err) console.log(err);
         });

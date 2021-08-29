@@ -5,11 +5,11 @@ block content
     div.warning-message Only Image Files Allowed
     form(class="newItemForm" method='POST' action="/newItem" enctype="multipart/form-data")
             div.form-group
+            label(for='image')
+            input.file-input(placeholder='Image' type='file' name='image' required)
+            div.form-group
             label(for='name')
             input(type='text', placeholder='Name' name='name' required)
-            div.form-group
-            label(for='description')
-            input(type='text', placeholder='Description' name='description' required)
             div.form-group
             label(for='category')
             input(type='text', placeholder='Category' name='category' required)
@@ -20,7 +20,7 @@ block content
             label(for='instock')
             input(type='text', placeholder='Instock' name='instock' required)
             div.form-group
-            label(for='image')
-            input.file-input(placeholder='Image' type='file' name='image' required)
+            label(for='description')
+            textarea.description-box(cols="50", rows="10" placeholder='Description' name='description' required)
             br
             button.add-item-button(type='submit') Submit

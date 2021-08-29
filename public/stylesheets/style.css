@@ -123,6 +123,11 @@ p{
     margin-bottom: 1rem;
   }
 
+  .description-box{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
   .editForm > input{
     font-size: 1.2rem;
     margin-bottom: 1rem;

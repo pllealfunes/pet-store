@@ -16,9 +16,6 @@ block content
             label(for='name')
             input(type='text', value=item.name name='name')
             div.form-group
-            label(for='description')
-            input(type='text', value=item.description name='description')
-            div.form-group
             label(for='category')
             input(type='text', value=item.category name='category')
             div.form-group
@@ -28,8 +25,8 @@ block content
             label(for='instock')
             input(type='text', value=item.instock name='instock')
             div.form-group
-            label(for='image')
-            input(placeholder='Image', type='file' value=item.imageurl name='image')
+            label(for='description')
+            textarea.description-box(cols="50", rows="10" name='description') #{item.description}
             br
             button.update-button(type='submit') Update Item
   br

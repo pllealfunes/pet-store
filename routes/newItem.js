@@ -23,7 +23,7 @@ formRouter.post('/', upload.single('image'), function (req, res, next) {
     let item = new items(newItem);
     item.save()
         .then(() => {
-            res.redirect('/');
+            res.redirect(`/item/${item.id}`);
         })
         .catch((err) => {
             if (err) {
