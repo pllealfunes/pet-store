@@ -14,7 +14,7 @@ block content
   form(class="editForm" method='POST' action="/item/"+item._id enctype="multipart/form-data")
             div.form-group
             label(for='image')
-            input(placeholder='Image' type='file' name='image' value=item.description)
+            input(placeholder='Image' type='file' name='image' )
             div.form-group
             label(for='name')
             input(type='text', value=item.name name='name')
