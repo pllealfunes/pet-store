@@ -22,4 +22,5 @@ On this page a user can view more details about an item. The user may also choos
 * Does not display errors if failure to upload new product or fail to edit product properly
 
 ## Resources
-Display Categories on homepage: https://flaviocopes.com/how-to-get-unique-properties-of-object-in-array/
+* Display Categories on homepage: https://flaviocopes.com/how-to-get-unique-properties-of-object-in-array/
+* Pexels for images
