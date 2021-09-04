@@ -32,6 +32,8 @@ app.use('/item', itemRouter);
 app.use('/category', categoryRouter);
 app.use('/newItem', newItemRouter);
 
+app.listen(process.env.PORT || 3000);
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
