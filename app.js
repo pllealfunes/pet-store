@@ -14,8 +14,8 @@ require('dotenv').config();
 
 var app = express();
 
-dbURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.foitw.mongodb.net/Cluster0?retryWrites=true&w=majority`;
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
+//dbURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.foitw.mongodb.net/Cluster0?retryWrites=true&w=majority`;
+mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
