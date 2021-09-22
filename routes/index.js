@@ -15,7 +15,7 @@ router.get('/', (req, res, next) => {
     })
     .catch((err) => {
       if (err) {
-        res.end("ERROR!");
+        res.end("ERROR HOME!");
       }
     });
 });
