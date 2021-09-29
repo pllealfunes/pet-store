@@ -14,10 +14,6 @@ require('dotenv').config();
 
 var app = express();
 
-//dbURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.foitw.mongodb.net/Cluster0?retryWrites=true&w=majority`;
-//mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log('MongoDB Connected...'))
-//.catch(err => console.log(err));
-
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.foitw.mongodb.net/Cluster0?retryWrites=true&w=majority`, {
   useUnifiedTopology: true,
   useNewUrlParser: true
